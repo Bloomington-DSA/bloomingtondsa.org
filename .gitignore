@@ -2,6 +2,7 @@
 dist/
 # generated types
 .astro/
+.vercel/
 
 # dependencies
 node_modules/
@@ -19,10 +20,13 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-*.command
 
 # Archives
 *.zip
 
 # jetbrains setting folder
 .idea/
+
+# local dev
+*.command
+*.sketch
