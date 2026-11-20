@@ -1,0 +1,54 @@
+---
+import Layout from '/src/components/main.astro';
+
+import '/src/styles/projects.css';
+import '/src/styles/bash.css';
+
+import { Astro } from 'astro';
+const site = Astro.site;
+
+import { Image } from 'astro:assets';
+import BashLogo from '/src/media/bash-rose.png';
+import BashPoster2025 from '/src/media/bash-2025.jpg';
+
+const gallery2025 = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/media/bash/2025/*.{jpg,jpeg,png,webp}",
+);
+---
+
+<meta property="og:image" content={site + 'bash-assets/preview.png'}>
+<meta property="twitter:image" content={site + 'bash-assets/preview.png'}>
+<meta itemprop="image" content={site + 'bash-assets/preview.png'}>
+
+<Layout title="Bread and Roses Bash 2025!" description="Bloomington DSA cordially invites you to the 2025 Bread and Roses Bash in support of the Hoosier Abortion Fund" headline="raised over $6k for the Hoosier Abortion Fund at the 2025 Bread and Roses Bash!">
+
+<section class="bash">
+
+<h1><a class="bash-link" href="/projects/bash/">Bread & Roses Bash</a><br /> <span style="font-size: 230%;font-style:italic;">2025</span></h1>
+
+<Image src={BashPoster2025} alt="<#alt#>" style="width:auto;max-height:80vh;margin:auto;border-radius: 0.5rem;" />
+
+<p>Bloomington DSA's <em>Bread and Roses Bash</em> is an annual all-ages fundraiser concert and party in support of a local non-profit doing important work in Bloomington or Indiana. 
+</p>
+<p>In 2025, the Bash raised over $6k for the <a class="simple-link" href="https://www.all-options.org/find-support/haf/">Hoosier Abortion Fund</a> with live music from <a class="simple-link" href="https://negativeglow.bandcamp.com/">Negative Glow</a>, <a class="simple-link" href="https://www.instagram.com/the.sera.tones/">The Sera-Tones</a>, <a class="simple-link" href="https://www.instagram.com/mswfos.band/">Magical Space Wizards for Outer Space</a>, and more!</p>
+
+</section>
+
+<section class="gallery">
+<h2>Photos from 2025 Bread & Roses Bash!</h2>
+    {
+      Object.entries(gallery2025).map(async ([_path, image], index) => {
+        const { default: imageData } = await image();
+        return (
+          <Image
+            src={imageData}
+            alt=""
+            height={300}
+            loading={index < 20 ? "eager" : "lazy"}
+          />
+        );
+      })
+    }
+</section>
+
+</Layout>

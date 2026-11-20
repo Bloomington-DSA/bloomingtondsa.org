@@ -1,0 +1,31 @@
+---
+import Layout from '/src/components/main.astro';
+---
+
+<noscript>
+<meta http-equiv="refresh" content="5; url=https://discord.com/invite/uhfySdvq6t" />
+</noscript>
+
+<Layout title="Chat" description=""  headline=" is moving to Discord!">
+
+<section>
+<p>We're moving our chapter chat from Element to Discord. <br>Redirecting to Discord in <span id="countdown">5</span> seconds.</p>
+<p>Need to access the old chat? Visit <a href="https://chat-archive.bloomingtondsa.org">chat-archive.bloomingtondsa.org</a></p>
+</section>
+
+</Layout>
+
+
+<script>
+var count = 5;
+var redirectUrl = 'https://discord.com/invite/uhfySdvq6t';
+var interval = setInterval(function() {
+  count--;
+  document.getElementById('countdown').innerHTML = count;
+
+  if (count === 0) {
+    clearInterval(interval);
+    window.location.href = redirectUrl;
+  }
+}, 1000);
+</script>

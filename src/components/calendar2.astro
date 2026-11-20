@@ -1,0 +1,48 @@
+---
+// src/components/Calendar.astro
+---
+
+<div id="calendar"></div>
+
+<script is:inline>
+  console.log("hello??")
+  import { Calendar } from 'fullcalendar';
+  import dayGridPlugin from 'fullcalendar/daygrid';
+  import timeGridPlugin from 'fullcalendar/timegrid';
+  import interactionPlugin from 'fullcalendar/interaction';
+  import classicThemePlugin from 'fullcalendar/themes/classic';
+  
+  // Import necessary CSS for layout and themes
+  import 'fullcalendar/skeleton.css';
+  import 'fullcalendar/themes/classic/theme.css';
+
+  const calendarEl = document.getElementById('calendar');
+
+  if (calendarEl) {
+    const calendar = new Calendar(calendarEl, {
+      plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, classicThemePlugin],
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      editable: true,
+      selectable: true,
+      events: [
+        { title: 'Project Kickoff', start: '2026-10-15' },
+        { title: 'Team Sync', start: '2026-10-20T10:30:00', end: '2026-10-20T11:30:00' }
+      ]
+    });
+
+    calendar.render();
+  }
+</script>
+
+<style>
+  #calendar {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+</style>

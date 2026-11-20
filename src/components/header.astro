@@ -1,0 +1,81 @@
+---
+import { Astro } from 'astro';
+const { headline, join } = Astro.props;
+---
+
+<header>
+<h1>
+  <a href="/" class="title">Bloomington&nbsp;DSA</a>{" "}
+  <Fragment set:html={headline} />{" "}
+  
+  <div class="header-navigation">
+    <div class="display-navigation">
+      {join && <a href="/join" class="navigation-join">Join Us</a>}{" "}
+      <button id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span id="symbol">•••</span>
+      </button>
+    </div>
+    {" "}
+    <div class="hidden-navigation">
+      {!join && <a class="navigation-item" href="/join">Join Us</a>}
+      <a class="navigation-item" href="/about">About</a>
+      <a class="navigation-item" href="/projects">Projects</a>
+      <a class="navigation-item" href="/calendar">Calendar</a>
+    </div>
+  </div>
+  
+</h1>
+</header>
+
+<script is:inline>
+const menuToggle = document.getElementById('menu-toggle');
+const header = document.querySelector('header');
+const symbol = document.getElementById('symbol');
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = header.classList.toggle('menu-open');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+  symbol.textContent = isOpen ? '×' : '•••';
+});
+</script>
+
+<style>
+  .header-navigation{
+    display: contents;
+  }
+  .display-navigation{
+    display: inline-block;
+  }
+  .hidden-navigation{
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0.2em 0;
+    gap: 0.2em;
+  }
+  
+  #menu-toggle {
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    border-radius: 10rem;
+    padding: 0;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    width: 1.32em;
+  }
+  a.navigation-item {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, text-shadow 0.3s;
+    display: inline-block;
+  }
+  header.menu-open a.navigation-item {
+    opacity: 1;
+    visibility: visible;
+    display: inline-block;
+  }
+</style>

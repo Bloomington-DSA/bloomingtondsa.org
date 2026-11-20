@@ -1,0 +1,25 @@
+# redir /join https://act.dsausa.org/donate/membership/
+redir /proposal https://docs.google.com/forms/d/e/1FAIpQLScf2BFwYRuuAyI-ZvWSUlqywyndKDLNaSjGUSsmROHr_JBGfw/viewform
+redir /announcements https://indianagradworkers.org/meet-with-me
+redir /donate https://actionnetwork.org/fundraising/donate-to-bloomington-dsa?source=bloomingtondsa.org&
+redir /sign-in https://docs.google.com/forms/d/e/1FAIpQLScDLp6x0HsGGa2TIKJjZjE2m4Rt2AAmTT_94KYYKrygdgDqTw/viewform?usp=preview
+redir /change-everything /
+redir /anti-flock https://linktr.ee/btownflocksafety
+redir /flock https://bdsasolidstate.org/
+redir /chat-guide /chat
+redir /discord https://discord.gg/uhfySdvq6t
+redir /meet https://discord.gg/uhfySdvq6t
+redir /instagram https://instagram.com/bloomingtondsa/
+redir /facebook https://www.facebook.com/bloomingtondsa/
+redir /ewoc https://docs.google.com/forms/d/e/1FAIpQLSc2qnqUUVUz8i16Fji7J8pMGaVJBFcwPWsLTqgdAkQtQTFNAA/viewform
+redir /job-board https://docs.google.com/spreadsheets/d/1lYSCVKPTsNHtq-WHOtZJp7ekxCCa2xgwghk-kENaJeI/edit?usp=sharing
+redir /candidate-forum/questions https://docs.google.com/forms/d/e/1FAIpQLSdKKD_w8tz07vxDVLdu9bl7T5BKVaLSGGZRJVmjy5LPMjUzOg/viewform
+redir /candidate-forum/survey https://docs.google.com/forms/d/e/1FAIpQLScjXPpXFywQQ4X5gFU2l2FA_5J92LzAe3dIQCXYjpdtbd36PA/viewform
+redir /h4a https://docs.google.com/forms/d/e/1FAIpQLSfAaFu0ErkFNkJTBnuNEcBmuqpK0NKVsSoBgxd0PwnYpt3tZA/viewform
+redir /local-dues https://actionnetwork.org/fundraising/bloomington-dsa-local-dues-2
+redir /dues https://actionnetwork.org/fundraising/bloomington-dsa-local-dues-2
+redir /cardinal https://actionnetwork.org/fundraising/bloomington-dsa-local-dues-2
+redir /shirt https://actionnetwork.org/fundraising/donate-to-bloomington-dsa-to-receive-a-t-shirt
+redir /pdfs/Bloomington+DSA+2027+Voter+Guide.pdf /pdfs/Bloomington%20DSA%202027%20Voter%20Guide.pdf
+redir /housing-survey https://docs.google.com/forms/d/e/1FAIpQLSfhSBC78cnQ1JSF_A5TSlSolqjnuKbwU0uoEN-L-kF45IXgCw/viewform
+# redir /bash* https://secure.actblue.com/donate/breadrosesbash26

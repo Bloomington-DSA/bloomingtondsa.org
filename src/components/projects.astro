@@ -1,0 +1,79 @@
+---
+import '/src/styles/projects.css';
+
+import { Image } from 'astro:assets';
+import HomesForAll from '/src/media/homes-for-all.png';
+import Stonewall from '/src/media/stonewall.png';
+import CandidateForum from '/src/media/candidate-forum.png';
+import Bash from '/src/media/bread-and-roses-bash.png';
+import AntiFlock from '/src/media/anti-flock.png';
+import KnowYourRights from '/src/media/know-your-rights.png';
+---
+
+<section class="carousel-container">
+  <div class="header-row">
+    <h2>Bloomington DSA Projects</h2>
+    <div class="nav-controls">
+      <button id="prev" aria-label="Previous slide">←</button>
+      <button id="next" aria-label="Next slide">→</button>
+    </div>
+  </div>
+
+  <div class="projects-grid" id="projectGrid">
+    <a href="/projects/stonewall" title="Stonewall Working Group" class="project" style={{backgroundImage: "url('/stonewall.png')", backgroundSize: "cover"}}>
+      <Image src={Stonewall} alt="" loading="eager"/>
+    </a>
+
+    <a href="https://bh4a.org" title="Homes for All" class="project" style={{backgroundColor: "#1308C3"}}>
+      <Image src={HomesForAll} alt="" loading="eager"/>
+    </a>
+    
+    <a href="https://bdsasolidstate.org" title="Anti-Flock, Anti-ICE" class="project" style={{backgroundColor: "#ec1f27"}}>
+      <Image src={AntiFlock} alt="Anti-Flock text" loading="eager"/>
+    </a>
+
+    <a href="/projects/bash" title="Bread and Roses Bash Fundraiser" class="project" style={{backgroundColor: "#EBC0D5"}}>
+      <Image src={Bash} alt="Bread & Roses Bash" loading="eager"/>
+    </a>
+
+    <a href="/projects/candidate-forum" title="Candidate Forum" class="project" style={{backgroundColor: "#60936D"}}>
+      <Image src={CandidateForum} alt="Candidate Forum flyer" loading="eager"/>
+    </a>
+
+    <a href="/projects/know-your-rights" title="Know Your Rights" class="project" style={{backgroundColor: "#6aa2f5"}}>
+      <Image src={KnowYourRights} alt="Know your rights" loading="eager" />
+    </a>
+  </div>
+</section>
+
+<script is:inline>
+  const grid = document.getElementById('projectGrid');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  function getScrollAmount() {
+    // Select the first project card
+    const firstCard = grid?.querySelector('.project');
+    if (!firstCard) return 0;
+
+    // Get the width of the card + the CSS gap (16px / 1em)
+    const cardWidth = firstCard.clientWidth;
+    const gap = parseInt(window.getComputedStyle(grid).gap) || 0;
+
+    return cardWidth + gap;
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    grid?.scrollBy({ 
+      left: -getScrollAmount(), 
+      behavior: 'smooth' 
+    });
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    grid?.scrollBy({ 
+      left: getScrollAmount(), 
+      behavior: 'smooth' 
+    });
+  });
+</script>

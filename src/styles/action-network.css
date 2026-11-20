@@ -1,0 +1,399 @@
+.actionNetwork {
+	max-width: 800px;
+	& li{
+	list-style: none;
+	}
+	& ul{
+	padding: 0;
+	}
+	& #action_info, 
+	& #logo_wrap,
+	& #can_embed_form_inner > h4, 
+	& #can_embed_form .floatlabel-wrapper .floatlabel-label-active, 
+	& label[for='form-share_link'] {
+		display: none !important;
+	}
+	& .core_field, 
+	& .control-group, 
+	& #form_col2{
+		margin: 1em 0;
+	}
+	& .floatlabel-input{
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+	height: 2em;
+	box-sizing: border-box;
+	border: solid 1px var(--black-tint-4);
+	padding: 0.5em;
+	border-radius: 0.3rem;
+	}
+	& .floatlabel-label-inactive{
+	font-size: 75%;
+	display:none;
+	}
+	& .checkbox{
+	display: block;
+	}
+	& [type="checkbox"]{
+	width: 1.5em;
+	height: 1.5em;
+	}
+	& [name="commit"]{
+	all: unset;
+	font-size: inherit;
+	padding: 0.2em 0.5em;
+	border: solid 0.15em var(--red);
+	border-radius: 0.3rem;
+	color: var(--red);
+	text-decoration: none;
+	transition: 0.3s;
+	transition-property: background-color, color;
+	cursor: pointer;
+	}
+	& [name="commit"]:hover{
+	background-color: var(--red);
+  color: var(--white);
+	}
+	& .can_selectInner{
+	display: none !important;
+	}
+	& #can_embed_form .country_drop_wrap {
+	display: none;
+	width: 100% !important;
+	}
+	& #can_embed_form .country_drop_wrap select.can_select {
+	height: 33px !important;
+	width: unset !important;
+	opacity: 1 !important;
+	font-family: inherit;
+	font-size: inherit;
+	height: 2em;
+	box-sizing: border-box;
+	border: solid 1px var(--black-tint-4);
+	padding: 0.5em;
+	border-radius: 0.3rem;
+	}
+	& #can_embed_form .country_drop_wrap span {
+	width: 100% !important;
+	}
+	& .international_link-wrap{
+	font-size: 75%;
+	}
+	& #can_embed_form input[type=text].error_input,
+	& #can_embed_form #donate_auto_modal input[type=text].error_input,
+	& #donate_auto_modal #can_embed_form input[type=text].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=text].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=text].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=text].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=text].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=text].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=text].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=text].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=text].select2-choice,
+	& #can_embed_form .error_input-select_wrap > input[type=text].can_select,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=text].select2-choice,
+	& #can_embed_form input[type=password].error_input,
+	& #can_embed_form #donate_auto_modal input[type=password].error_input,
+	& #donate_auto_modal #can_embed_form input[type=password].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=password].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=password].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=password].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=password].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=password].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=password].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=password].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=password].select2-choice,
+	& #can_embed_form .error_input-select_wrap > input[type=password].can_select,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=password].select2-choice,
+	& #can_embed_form input[type=url].error_input,
+	& #can_embed_form #donate_auto_modal input[type=url][type=password].error_input,
+	& #donate_auto_modal #can_embed_form input[type=url][type=password].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=url][type=password].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=url][type=password].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=url][type=password].select2-choice,
+	& #can_embed_form #donate_auto_modal input[type=url][type=text].error_input,
+	& #donate_auto_modal #can_embed_form input[type=url][type=text].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=url][type=text].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=url][type=text].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=url][type=text].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=url][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=url][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=url][type=password].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=url][type=password].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=url][type=password].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=url][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=url][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=url][type=text].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=url][type=text].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=url][type=text].select2-choice,
+	& #can_embed_form .error_input-select_wrap > input[type=url].can_select,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=url].select2-choice,
+	& #can_embed_form input[type=email].error_input,
+	& #can_embed_form #donate_auto_modal input[type=email][type=password].error_input,
+	& #donate_auto_modal #can_embed_form input[type=email][type=password].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=email][type=password].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=email][type=password].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=email][type=password].select2-choice,
+	& #can_embed_form #donate_auto_modal input[type=email][type=text].error_input,
+	& #donate_auto_modal #can_embed_form input[type=email][type=text].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=email][type=text].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=email][type=text].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=email][type=text].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=email][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=email][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=email][type=password].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=email][type=password].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=email][type=password].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=email][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=email][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=email][type=text].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=email][type=text].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=email][type=text].select2-choice,
+	& #can_embed_form .error_input-select_wrap > input[type=email].can_select,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=email].select2-choice,
+	& #can_embed_form input[type=tel].error_input,
+	& #can_embed_form #donate_auto_modal input[type=tel][type=password].error_input,
+	& #donate_auto_modal #can_embed_form input[type=tel][type=password].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=password].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=tel][type=password].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=tel][type=password].select2-choice,
+	& #can_embed_form #donate_auto_modal input[type=tel][type=text].error_input,
+	& #donate_auto_modal #can_embed_form input[type=tel][type=text].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=text].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=tel][type=text].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=tel][type=text].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=tel][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=tel][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=password].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=tel][type=password].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=tel][type=password].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=tel][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=tel][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=text].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=tel][type=text].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=tel][type=text].select2-choice,
+	& #can_embed_form .error_input-select_wrap > input[type=tel].can_select,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=tel].select2-choice,
+	& #can_embed_form input[type=number].error_input,
+	& #can_embed_form #donate_auto_modal input[type=number][type=password].error_input,
+	& #donate_auto_modal #can_embed_form input[type=number][type=password].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=number][type=password].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=number][type=password].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=number][type=password].select2-choice,
+	& #can_embed_form #donate_auto_modal input[type=number][type=text].error_input,
+	& #donate_auto_modal #can_embed_form input[type=number][type=text].error_input,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=number][type=text].can_select,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=number][type=text].can_select,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=number][type=text].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=number][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=number][type=password].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=number][type=password].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=number][type=password].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=password].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=number][type=password].select2-choice,
+#can_embed_form #donate_make_recurring_modal input[type=number][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form input[type=number][type=text].error_input,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=number][type=text].can_select,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=number][type=text].can_select,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=text].select2-choice,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=number][type=text].select2-choice,
+	& #can_embed_form .error_input-select_wrap > input[type=number].can_select,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=number].select2-choice,
+	& #can_embed_form input[type=text].error_input_cc,
+	& #can_embed_form input[type=password].error_input_cc,
+	& #can_embed_form input[type=url].error_input_cc,
+	& #can_embed_form input[type=email].error_input_cc,
+	& #can_embed_form input[type=tel].error_input_cc,
+	& #can_embed_form input[type=number].error_input_cc {
+  border: 1px solid var(--red-tint-1);
+  color: var(--black-tint-2);
+  box-shadow: 0 0 0 2px var(--red-tint-1) inset, 0 0 4px 0 var(--red-tint-1) inset;
+  transition: all 0.2s linear;
+}
+	& #can_embed_form input[type=text].error_input:focus,
+	& #can_embed_form #donate_auto_modal input[type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=text].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=text].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=text].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=text].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=text].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=text].select2-choice:focus,
+	& #can_embed_form .error_input-select_wrap > input[type=text].can_select:focus,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=text].select2-choice:focus,
+	& #can_embed_form input[type=password].error_input:focus,
+	& #can_embed_form #donate_auto_modal input[type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=password].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=password].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=password].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=password].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=password].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=password].select2-choice:focus,
+	& #can_embed_form .error_input-select_wrap > input[type=password].can_select:focus,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=password].select2-choice:focus,
+	& #can_embed_form input[type=url].error_input:focus,
+	& #can_embed_form #donate_auto_modal input[type=url][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=url][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=url][type=password].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=url][type=password].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=url][type=password].select2-choice:focus,
+	& #can_embed_form #donate_auto_modal input[type=url][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=url][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=url][type=text].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=url][type=text].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=url][type=text].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=url][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=url][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=url][type=password].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=url][type=password].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=url][type=password].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=url][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=url][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=url][type=text].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=url][type=text].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=url][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=url][type=text].select2-choice:focus,
+	& #can_embed_form .error_input-select_wrap > input[type=url].can_select:focus,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=url].select2-choice:focus,
+	& #can_embed_form input[type=email].error_input:focus,
+	& #can_embed_form #donate_auto_modal input[type=email][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=email][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=email][type=password].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=email][type=password].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=email][type=password].select2-choice:focus,
+	& #can_embed_form #donate_auto_modal input[type=email][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=email][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=email][type=text].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=email][type=text].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=email][type=text].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=email][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=email][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=email][type=password].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=email][type=password].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=email][type=password].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=email][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=email][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=email][type=text].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=email][type=text].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=email][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=email][type=text].select2-choice:focus,
+	& #can_embed_form .error_input-select_wrap > input[type=email].can_select:focus,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=email].select2-choice:focus,
+	& #can_embed_form input[type=tel].error_input:focus,
+	& #can_embed_form #donate_auto_modal input[type=tel][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=tel][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=password].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=tel][type=password].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=tel][type=password].select2-choice:focus,
+	& #can_embed_form #donate_auto_modal input[type=tel][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=tel][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=text].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=tel][type=text].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=tel][type=text].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=tel][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=tel][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=password].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=tel][type=password].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=tel][type=password].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=tel][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=tel][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=tel][type=text].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=tel][type=text].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=tel][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=tel][type=text].select2-choice:focus,
+	& #can_embed_form .error_input-select_wrap > input[type=tel].can_select:focus,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=tel].select2-choice:focus,
+	& #can_embed_form input[type=number].error_input:focus,
+	& #can_embed_form #donate_auto_modal input[type=number][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=number][type=password].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=number][type=password].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=number][type=password].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=number][type=password].select2-choice:focus,
+	& #can_embed_form #donate_auto_modal input[type=number][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form input[type=number][type=text].error_input:focus,
+	& #donate_auto_modal #can_embed_form .error_input-select_wrap > input[type=number][type=text].can_select:focus,
+	& #can_embed_form #donate_auto_modal .error_input-select_wrap > input[type=number][type=text].can_select:focus,
+#donate_auto_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_auto_modal input[type=number][type=text].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=number][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=number][type=password].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=number][type=password].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=number][type=password].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=password].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=number][type=password].select2-choice:focus,
+#can_embed_form #donate_make_recurring_modal input[type=number][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form input[type=number][type=text].error_input:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > input[type=number][type=text].can_select:focus,
+#can_embed_form #donate_make_recurring_modal .error_input-select_wrap > input[type=number][type=text].can_select:focus,
+#donate_make_recurring_modal #can_embed_form .error_input-select_wrap > .select2-container input[type=number][type=text].select2-choice:focus,
+#can_embed_form .error_input-select_wrap > .select2-container #donate_make_recurring_modal input[type=number][type=text].select2-choice:focus,
+	& #can_embed_form .error_input-select_wrap > input[type=number].can_select:focus,
+#can_embed_form .error_input-select_wrap > .select2-container input[type=number].select2-choice:focus,
+	& #can_embed_form input[type=text].error_input_cc:focus,
+	& #can_embed_form input[type=password].error_input_cc:focus,
+	& #can_embed_form input[type=url].error_input_cc:focus,
+	& #can_embed_form input[type=email].error_input_cc:focus,
+	& #can_embed_form input[type=tel].error_input_cc:focus,
+	& #can_embed_form input[type=number].error_input_cc:focus {
+  box-shadow: none;
+  border: 1px solid var(--red-tint-1);
+}
+ & #can_embed_form textarea.error_input,
+	& #can_embed_form .error_input-select_wrap > textarea.can_select,
+	& #can_embed_form .error_input-select_wrap > .select2-container textarea.select2-choice,
+	& #can_embed_form .error_input_cc,
+	& #can_embed_form textarea.error_input_cc {
+  border: 1px solid var(--red-tint-1);
+  color: var(--black-tint-2);
+  box-shadow: 0 0 0 2px var(--red-tint-1) inset, 0 0 4px 0 var(--red-tint-1) inset;
+  transition: all 0.2s linear;
+}
+	& #can_embed_form textarea.error_input:focus,
+	& #can_embed_form .error_input-select_wrap > textarea.can_select:focus,
+	& #can_embed_form .error_input-select_wrap > .select2-container textarea.select2-choice:focus,
+	& #can_embed_form .error_input_cc:focus,
+	& #can_embed_form textarea.error_input_cc:focus {
+  box-shadow: none;
+  border: 1px solid var(--red-tint-1);
+}
+}
+
+

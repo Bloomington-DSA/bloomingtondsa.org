@@ -1,0 +1,19 @@
+---
+import '/src/styles/action-network.css';
+
+interface Props {
+  slug: string;
+  type: string;
+  options: string;
+}
+
+const { slug, type } = Astro.props;
+const url = "https://actionnetwork.org/widgets/v6/" + type + "/" + slug + "?format=js&source=site-footer&css=whitelabel";
+
+const divID = "can-" + type + "-area-" + slug;
+---
+
+<section class="actionNetwork" >
+<script is:inline src={url}></script>
+<div id={divID} style='width: 100%'></div>
+</section>

@@ -1,0 +1,62 @@
+@font-face {
+font-family: 'Instrument';
+font-style: italic;
+src: url('/InstrumentSerif-Italic.woff2') format('woff2');
+}
+@font-face {
+font-family: 'Instrument';
+font-style: normal;
+src: url('/InstrumentSerif-Regular.woff2') format('woff2');
+}
+a.bash-link{
+background-color: rgb(136 0 46);
+}
+.gallery{
+position: relative;
+margin: 3em 1em;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1em;
+  & img{
+    border-radius: 0.5em;
+    max-width: 100%;
+    height: auto;
+  }
+  & h1,h2{
+  font-size: 200%;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1;
+  color: rgb(136 0 46);
+  font-family: Instrument, serif;
+  flex-basis: 100%;
+  }
+  h2::before{
+  content:"";
+  padding:0;
+  }
+}
+.bash{
+display: flex;
+align-items: center;
+flex-direction: column;
+max-width:525px;
+margin: 1.5em auto;
+font-family: Instrument, serif;
+font-size: 150%;
+font-weight: normal;
+gap: 1em;
+  & h1{
+  font-size: 250%;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1;
+  color: rgb(136 0 46);
+  font-family: Instrument, serif;
+  }
+  & p{
+  margin:0 1em;
+  text-align: justify;
+  }
+}

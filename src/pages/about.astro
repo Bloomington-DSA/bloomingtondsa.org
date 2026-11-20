@@ -1,0 +1,57 @@
+---
+import Layout from '/src/components/main.astro';
+import ActionNetwork from '/src/components/action-network.astro';
+
+import { Image } from 'astro:assets';
+import RoseRight from '/src/media/bash-rose.png';
+import RoseLeft from '/src/media/bash-rose2.png';
+---
+
+<Layout title="About" description="Bloomington DSA is fighting for a world that puts people over profits." headline="is fighting for a world that puts people over profits." join=true>
+
+<section class="columns">
+
+<h2>What is Democratic Socialism?</h2>
+
+<p>What would it feel like if you didn't have to worry about making ends meet each week. Imagine what it would be like to know you didn't have rent, mortgage payments, or student debt payments due every month, or that you could go to the doctor without worrying about insurance.</p> 
+
+<p>Democratic socialism is the belief that society should be truly democratic, and that the interests of the many should prevail over the interests of the wealthy few.</p>
+
+<p>When we imagine democracy, we mean more than voting every few years. We mean democracy in our workplaces, giving people who work for a living real control over our own labor. We mean democracy in our housing, giving tenants more power to stop landlords from gouging rent or refusing repairs. We mean democracy in our government, ending an electoral system where money buys power and everyday people are left to clean up the mess.</p>
+
+<p>Capitalism is standing in the way of this democracy. The ruling class—corporations, the wealthy, and the politicians beholden to them—exploit the rest of us for their own profit.</p> 
+
+<p> But it doesn't have to be this way.</p>
+
+<p>Those of us in DSA believe that "if we lived in a classless society and governed ourselves, we could freely build a world without war or poverty. We could build a world where no one suffers for their race, gender, or religion, and everyone is free, equal, and cared for."</p>
+
+<p>That's the world we want, and that's the world we're making.</p>
+
+<p><a class="button" href="join">Join us</a></p>
+
+
+</section>
+<section class="columns">
+
+<h2>What is DSA?</h2>
+
+<p>The Democratic Socialists of America is the largest socialist organization in the United States, with over 100,000 members and chapters in all 50 states. We believe that working people should run both the economy and society democratically to meet human needs, not to make profits for a few.</p>
+<Image src={RoseRight} alt="<#alt#>" style={{ float:"right", width: "50%", height: "auto", shapeOutside: `url(${RoseRight.src})`, shapeMargin: "0.5em", }} />
+
+<p><a class="button external" href="https://www.dsausa.org/">Learn More about DSA</a></p>
+</section>
+
+<section class="">
+
+<h2>Bloomington DSA Policies</h2>
+
+<ul class="grid">
+	<li><a class="button" href="/by-laws">By-Laws</a></li>
+	<li><a class="button" href="/endorsements">Candidate Endorsement Procedure</a></li>
+	<li><a class="button external" href="https://docs.google.com/forms/d/e/1FAIpQLSdGze4w3Qj0qPl8Sam6s6pOEYXHGdp0qunulTW3N2AfIGVaAQ/viewform?usp=sharing&ouid=112905391791318649080">Member Grievance Form</a></li>
+</ul>
+
+
+</section>
+
+</Layout>

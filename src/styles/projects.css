@@ -1,0 +1,72 @@
+.carousel-container {
+	margin: 1.5em 0;
+}
+
+.header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin: 0 1.5em;
+}
+
+.nav-controls {
+	display: flex;
+	gap: 0.5em;
+}
+
+.nav-controls button {
+	background: rgba(255, 255, 255, 0.3);
+	color: var(--black);
+	border: none;
+	border-radius: 50%;
+	width: 1.75em;
+	height: 1.75em;
+	cursor: pointer;
+	font-size: 1em;
+	transition: background 0.2s;
+}
+
+.nav-controls button:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+.projects-grid {
+	margin: 0;
+	padding: 1.5em;
+	gap: 1em;
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	scrollbar-width: none; 
+}
+
+.projects-grid::-webkit-scrollbar {
+	display: none;
+}
+
+.project {
+	max-width: calc(100vw - 4em);
+	width: 400px;
+	flex: 0 0 400px;
+	aspect-ratio: 3 / 4;
+	scroll-snap-align: center;
+	font-family: serif;
+	text-decoration: none;
+	border-radius: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("/grain.png"), url("/grain.png");
+	background-size: 64px 64px;
+	box-shadow: -1px 2px 8px #00000050;
+	transition: box-shadow 0.5s;
+}
+
+.project img {
+	height: 70%;
+	max-width: 70%;
+	object-fit: scale-down;
+}

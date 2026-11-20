@@ -1,0 +1,47 @@
+---
+import Layout from '/src/components/main.astro';
+
+import '/src/styles/bash.css';
+
+import { Astro } from 'astro';
+const site = Astro.site;
+
+import { Image } from 'astro:assets';
+import BashLogo from '/src/media/bash-rose.png';
+
+const gallery2025 = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/media/bash/2025/*.{jpg,jpeg,png,webp}",
+);
+const gallery2026 = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/media/bash/2026/*.{jpg,jpeg,png,webp}",
+);
+---
+
+<meta property="og:image" content={site + 'bash-assets/preview.png'}>
+<meta property="twitter:image" content={site + 'bash-assets/preview.png'}>
+<meta itemprop="image" content={site + 'bash-assets/preview.png'}>
+
+<Layout title="Bread and Roses Bash!" description="Bloomington DSA cordially invites you to the Bread and Roses Bash—an all-ages fundraiser party in support of a local non-profit doing important work in Bloomington or Indiana." headline="cordially invites you to the Bread & Roses Bash—an annual all-ages fundraiser concert">
+
+<section class="bash">
+
+<Image src={BashLogo} alt="" style="max-width:100%;height:auto;filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));"/>
+
+<h1>Bread & Roses<br /> <span style="font-size: 230%;font-style:italic;">Bash</span></h1>
+
+<p>Bloomington DSA's <em>Bread and Roses Bash</em> is an annual all-ages fundraiser concert and party in support of a local non-profit doing important work in Bloomington or Indiana. 
+</p>
+<p>In 2026, we raised over $5k for for <a class="simple-link" href="https://www.exodusrefugee.org">Exodus Refugee</a>, heard live music from <a class="simple-link" class="simple-link" href="https://www.instagram.com/the.sera.tones/">The Sera-Tones</a>, <a class="simple-link" href="https://www.instagram.com/tipatipomusic/">Tipa Tipo</a>, <a class="simple-link" href="https://www.instagram.com/rearview_rhonda/">Rearview Rhonda</a>, <a class="simple-link" href="https://www.instagram.com/annie.babie.band/">Annie-Babie</a>, and <a class="simple-link" href="https://www.instagram.com/slugrugband/">Slug Rug</a>, with sound by Carlos Ramirez from Secretly Records and a gorgeous poster from <a class="simple-link" href="https://www.instagram.com/alexanderlanderman/">Alexander Landerman</a>.</p>
+
+<p><a class="button bash-link" style="text-align:center" href="/projects/bash/2026">2026 Bread and Roses Bash</a></p>
+
+
+<p>In 2025, the Bash raised over $6k for the <a class="simple-link" href="https://www.all-options.org/find-support/haf/">Hoosier Abortion Fund</a> with live music from <a class="simple-link" href="https://negativeglow.bandcamp.com/">Negative Glow</a>, <a class="simple-link" href="https://www.instagram.com/the.sera.tones/">The Sera-Tones</a>, <a class="simple-link" href="https://www.instagram.com/mswfos.band/">Magical Space Wizards for Outer Space</a>, and more!</p>
+
+<p><a class="button bash-link" style="text-align:center" href="/projects/bash/2025">2025 Bread and Roses Bash</a></p>
+
+<p>Want to help with 2027? Come to an <a class="simple-link" href="calendar">upcoming Chapter Meeting</a>!</p>
+
+</section>
+
+</Layout>

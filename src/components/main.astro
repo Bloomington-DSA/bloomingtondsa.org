@@ -1,0 +1,30 @@
+---
+import '/src/styles/styles.css';
+import SEO from '/src/components/seo.astro';
+import Header from '/src/components/header.astro';
+import Footer from '/src/components/footer.astro';
+const { title, description, headline, join } = Astro.props;
+
+const slotContent = await Astro.slots.render('default');
+const hasContent = !!slotContent?.trim();
+---
+
+<html lang="en">
+<!-- 
+    GET YOUR OWN ARTISAN HTML @ 
+      ✨ CHEAP.URLS.LOAN ✨
+"MORE CONVENIENT THAN A NEW HOBBY" 
+-->
+	<head>
+		<SEO title={title ? "Bloomington DSA: " + title : "Bloomington DSA"} description={description ? description : "Bloomington DSA is a chapter of the Democratic Socialists of America—the largest socialist organization in the United States—building a better world in Bloomington, Indiana."} />
+  <link rel="preload" href="/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/texgyrebonum-bold.woff2" as="font" type="font/woff2" crossorigin>
+	</head>
+	<body>
+  <Header headline={headline ? headline : " is a chapter of the Democratic Socialists of America&mdash;the largest socialist organization in the United States&mdash;building a better world in Bloomington, Indiana."} join={join} />
+      <main>
+        <slot />
+      </main>
+  <Footer />
+	</body>
+</html>

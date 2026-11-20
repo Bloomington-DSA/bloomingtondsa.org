@@ -1,0 +1,52 @@
+---
+const year = new Date().getFullYear();
+import Logo from '/src/media/bloomingtondsa-logo.svg';
+---
+
+<style>
+footer{
+margin-top: auto;
+gap: 1em;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+background-color: var(--red);
+background-image: url("/grain.png");
+background-size: 64px 64px;
+color: var(--white);
+padding:0.5em 2em;
+position: relative;
+border-radius: 1em 1em 0 0;
+  & a{
+    color: var(--white);
+    background-color: transparent;
+    text-decoration: underline;
+    padding: 0;
+  }
+  & #dsa-logo{
+    width: auto;
+    height: 10em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+  }
+}
+</style>
+
+<footer>
+
+<div>
+<p>Democratic Socialists of America<br />Bloomington, Indiana Chapter, {year}</p>
+
+<p>
+  <a href="https://www.instagram.com/bloomingtondsa/">Instagram</a>, 
+  <a href="https://www.facebook.com/bloomingtondsa/">Facebook</a>
+  <br />
+  <a href="mailto:bloomingtondsa@gmail.com">bloomingtondsa@gmail.com</a>
+</p>
+</div>
+
+<Logo id="dsa-logo" />
+
+</footer>

@@ -1,0 +1,90 @@
+---
+import Layout from '/src/components/main.astro';
+import Projects from '/src/components/projects.astro';
+import Calendar from '/src/components/calendar.astro';
+
+import { Image } from 'astro:assets';
+import RoseRight from '/src/media/bash-rose.png';
+import RoseLeft from '/src/media/bash-rose2.png';
+import BashPoster from '/src/media/bash-2026.jpg';
+//import Sketch1 from '/src/media/demand-democracy-at-work.png';
+---
+
+
+<Layout join=true>
+
+<!-- 
+<section style="margin-top:0">
+<a href="/pdfs/Bloomington%20DSA%202027%20Voter%20Guide.pdf" style="padding:1rem; background-color:var(~~red); display:block;color:var(~~white);text-decoration:none;max-width: 800px;margin:auto;border-radius:1em;">
+
+<p class="sans-serif bold large">Bloomington DSA Electoral Working Group is
+pleased to provide a <u>Voter Guide for the 2026
+Midterm Elections in Indiana</u>.&nbsp;&UpperRightArrow;</p>
+</a>
+</section>
+ -->
+
+<!-- 
+<section>
+<a href="bash" class="border" style="display:flex;align-items:center;flex-direction:column;padding: 1rem;width:fit-content; margin: auto; gap: 0.5rem;text-transform:uppercase;">
+<p style="margin: 0">Bread and Roses Bash Tickets Now available!</p>
+
+<Image src={BashPoster} alt="<#alt#>" style="width:auto;max-height:80vh;margin:auto;border-radius: 0.5rem;">
+
+</a>
+</section>
+ -->
+
+<!-- 
+<section>
+<a href="candidate-forum" class="border" style="padding:1rem; background-color:var(~~red-tint-4); display:block;color:var(~~black);text-decoration:none;max-width: 800px;margin:auto">
+<p class="sans-serif bold" style="text-transform:uppercase;margin-bottom:0">February 26, March 05</p>
+
+<p style="margin:0;">
+<span class="serif bigheader">Candidate<br> <span class="stroke">Forum!</span><span style="font-family:'Geist'">&nbsp;&UpperRightArrow;</span></span>
+</p>
+
+<p class="sans-serif bold" style="text-transform:uppercase">10 candidates, 4 elections &mdash; Fighting fascism starts at home</p>
+</a>
+</section>
+ -->
+
+
+<section class="columns">
+
+<p>Working people&mdash;not the wealthy few&mdash;should have the power to run society and the economy to ensure that everyone can live a dignified life.</p>
+
+<p>Our goal is to build working-class power to make real, material change to improve our lives. That means a society where everyone has quality housing, a living wage, good working conditions, free healthcare, and access to education, and a flourishing environment&mdash;where democracy is measured by the power people have over the conditions of their daily lives.</p> 
+
+<Image src={RoseRight} alt="<#alt#>" style={{ float:"right", width: "50%", height: "auto", shapeOutside: `url(${RoseRight.src})`, shapeMargin: "0.5em", }} />
+
+<p>That's what democratic socialism looks like, and that's what we're building in Bloomington.</p>
+
+<p><a class="button" href="about">Learn more</a></p>
+
+</section>
+
+<Calendar />
+
+<Projects />
+
+<section class="columns">
+
+<Image src={RoseLeft} alt="<#alt#>" style={{ float:"left", width: "50%", height: "auto", shapeOutside: `url(${RoseLeft.src})`, shapeMargin: "0.5em", }} />
+
+<p>“For the first time in the world’s history a subject class has it in its own power to accomplish its own emancipation without an appeal to brute force.</p>
+
+<p>This is the appeal which socialism makes to the workers of this nation and the world.</p>
+
+<p>It invites them to seize political power in the name of the working class, and to legally write their own economic emancipation proclamation.</p>
+
+<p>Under this invitation the nations of the earth, including our own, are seething with political revolt.</p>
+
+<p>It is the sure precursor of mighty changes—political, social, and economic—throughout the world.”</p>
+
+<p style="text-align:right">– Eugene V. Debs, 1912<br>Terra Haute, Indiana</p>
+
+
+</section>
+
+</Layout>

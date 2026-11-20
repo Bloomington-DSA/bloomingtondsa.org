@@ -1,0 +1,249 @@
+/* 
+@font-face {
+font-family: 'Geist';
+font-style: normal;
+font-weight: bold;
+src: url('/Geist-Bold.woff2') format('woff2');
+font-display: block;
+}
+ */
+@font-face {
+font-family: 'Geist';
+font-style: normal;
+font-weight: 100 900;
+src: url('/Geist.woff2') format('woff2');
+font-display: swap;
+}
+@font-face {
+font-family: 'texgyrebonum';
+font-style: normal;
+font-weight: bold;
+src: url('/texgyrebonum-bold.woff2') format('woff2');
+font-display: block;
+}
+/* 
+@view-transition {
+  navigation: auto;
+}
+ */
+:root{
+--red: rgb(236, 31, 39);
+--red-tint-1: rgb(255, 55, 76);
+--red-tint-2: rgb(255, 112, 122);
+--red-tint-3: rgb(255, 160, 167);
+--red-tint-4: rgb(255, 208, 211);
+--red-tint-5: rgb(255, 231, 233);
+
+--black: rgb(35, 31, 32);
+--black-tint-1: rgb(59, 56, 56);
+--black-tint-2: rgb(96, 92, 92);
+--black-tint-3: rgb(140, 137, 137);
+--black-tint-4: rgb(193, 192, 191);
+--black-tint-5: rgb(231, 231, 231);
+
+--white: rgb(251, 249, 249);
+}
+body{
+font-family: texgyrebonum,"Garamond","Baskerville","Baskerville Old Face","Hoefler Text","Times New Roman",serif; 
+font-weight: bold;
+color: var(--black);
+background-color: var(--red-tint-5);
+margin: 0;
+background-image: url("/grain.png");
+background-size: 128px 128px;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+max-width: 1000px;
+margin-top: 6vw;
+margin-right: auto;
+margin-left: auto;
+line-height: 1.2;
+}
+a{color: var(--red);}
+a{
+border-radius: 0.2em;
+padding: 0 0.3em;
+background-color: var(--red);
+color: var(--white);
+text-decoration: none;
+transition: text-shadow 0.3s;
+}
+a:hover,a:active{
+	text-shadow: rgba(255, 255, 255, 0.4) 0px 0 0.3em;
+}
+a.button{
+text-transform: uppercase;
+font-size: 120%;
+display: inline-block;
+padding: 0.25em 0.5em;
+}
+a.simple-link{
+padding: 0;
+background-color: unset;
+color: var(--red);
+text-decoration: underline;
+}
+a.simple-link:hover,a.simple-link:active{
+	text-shadow: var(--red-tint-3) 0px 0 0.3em;
+}
+a.external::after{
+content: "\00a0\2197";
+font-family: "Geist", "Arial", sans-serif;
+
+}
+
+h1{
+font-family: "Geist", "Arial", sans-serif;
+font-weight: 600;
+font-size: min(max(3vw,2rem), 2.5rem);
+letter-spacing: -2%;
+margin: 0;
+column-span: all;
+}
+h2{
+font-family: texgyrebonum,"Garamond","Baskerville","Baskerville Old Face","Hoefler Text","Times New Roman",serif; 
+font-weight: inherit;
+font-size: 150%;
+line-height: 1.2;
+letter-spacing: -0.02em;
+margin:0;
+margin-bottom: 1em;
+scroll-margin-top: 1em;
+column-span: all;
+}
+h2::before{
+content: "\25CF";
+font-size: 180%; 
+line-height: 0.55;
+vertical-align: top;
+
+padding-right: 0.2em;
+color: var(--red)
+}
+h3{
+font-family: texgyrebonum,"Garamond","Baskerville","Baskerville Old Face","Hoefler Text","Times New Roman",serif; 
+margin: 0.5em 0;
+line-height: 1;
+}
+
+
+hr{
+border: none;
+border-top: 0.15rem solid var(--black);
+}
+
+p{
+margin: 1em 0;
+}
+p:first-child{margin-top:0;}
+p:last-child{margin-bottom:0;}
+p,ol{
+max-width: 1000px;
+}
+ul{
+list-style:"\25CF\00A0";
+}
+header,section{
+margin: 1.5em;
+
+}
+header{
+margin-bottom:0;
+}
+section p{
+margin-top:0;
+margin-bottom: 1em;
+}
+
+.bigheader{
+font-weight: inherit;
+font-size: min(max(12vw,3rem), 8rem);
+text-transform: uppercase;
+letter-spacing: -0.02em;
+line-height: 0.8;
+display:inline-block;
+}
+
+
+.outline{
+border: solid 0.08em var(--red);
+border-radius: 0.2em;
+padding: 0 0.2em;
+}
+.sans-serif{
+font-family: "Geist", "Arial", sans-serif;
+font-weight: 500;
+font-size: 120%;
+}
+.serif{
+font-family: texgyrebonum,"Garamond","Baskerville","Baskerville Old Face","Hoefler Text","Times New Roman",serif; 
+}
+.large{font-size: 150%;}
+.small{font-size: 100%;}
+.italic{font-style: italic;}
+.bold{font-weight: bold;}
+.center{text-align: center;}
+.right{text-align: right;}
+.border{border: solid 0.15rem; border-radius: 0.5em;}
+.red{color: var(--red)}
+.white{color: var(--white)}
+.skew{transform:rotate(-10deg);}
+.script{font-family: "SauberScript";}
+.plain{text-decoration: none; color: inherit;}
+.rotate{transform: scaleX(-1) rotate(90deg);}
+.hide{display:none}
+.stroke{
+-webkit-text-stroke: 0.03em var(--black);
+color:transparent;
+}
+.flex-center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.grid{
+display: flex;
+flex-wrap: wrap;
+gap: 0.5em;
+margin:0;
+margin-bottom: 1.5em;
+padding: 0;
+  & li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--red);
+  list-style: none;
+  }
+}
+iframe{
+width: 100%;
+min-height: 800px;
+height: 90vh;
+border-radius: 1em;
+margin: 1em 0;
+}
+
+.columns{
+columns: 2;
+}
+.columns-flex{
+display: flex;
+gap: 1em;
+}
+.columns-flex > *{
+flex-basis: 50%;
+}
+
+@media (max-width: 500px) {
+	.columns{
+		columns: 1
+	}
+	.columns-flex{
+		display: block;
+	}
+}

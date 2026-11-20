@@ -1,0 +1,51 @@
+---
+import Layout from '/src/components/main.astro';
+import { Image } from 'astro:assets';
+
+import RoseRight from '/src/media/bash-rose.png';
+import RoseLeft from '/src/media/bash-rose2.png';
+---
+
+<Layout title="Join DSA" description="We believe that working people should run the economy and society democratically to meet human needs—not to make profits for a few. Sound good? Join DSA!" headline="is a chapter of the largest socialist organization in American history. Join DSA and help us build a better world!">
+
+<section class="columns">
+
+<h2>Become a Member of DSA</h2>
+
+
+<p>The Democratic Socialists of America is the largest socialist organization in American history, with over 100,000 members and chapters in all 50 states.</p>
+
+<p>As member-run organization, dues are the backbone of our national and local operations. We encourage Bloomington DSA members to pay both national and local dues.</p>
+
+<p style="text-align:center;" ><a class="button external" href="https://www.dsausa.org/join?source=bloomington-indiana-fall26">Join National DSA!</a></p>
+
+<Image src={RoseRight} alt="<#alt#>" style={{ float:"right", width: "50%", height: "auto", shapeOutside: `url(${RoseRight.src})`, shapeMargin: "0.5em", }} />
+
+<p>To be a member of the Bloomington, Indiana chapter of DSA, you must pay national DSA dues or apply for a <a class="simple-link" href="https://act.dsausa.org/survey/dueswaiver/">dues waiver</a>.</p>
+
+<p>This places you on our official member list, allows you to vote on chapter business, join National DSA workshops and events, and is a requirement for leadership positions in the chapter.</p>
+
+
+
+</section>
+
+<section class="columns">
+<h2>Support Bloomington DSA with Local Dues</h2>
+
+<p>To build socialism here in Bloomington, Bloomington DSA uses voluntary Local Dues. Local dues are optional, but help us build a stronger chapter.</p>
+
+<ul class="grid">
+	<li><a class="button" href="https://actionnetwork.org/fundraising/bloomington-dsa-local-dues?amount=5&recurring=true&period=recurring_monthly">$5/Month</a></li>
+	<li><a class="button" href="https://actionnetwork.org/fundraising/bloomington-dsa-local-dues?amount=15&recurring=true&period=recurring_monthly">$15/Month</a></li>
+	<li><a class="button" href="https://actionnetwork.org/fundraising/bloomington-dsa-local-dues?amount=25&recurring=true&period=recurring_monthly">$25/Month</a></li>
+	<li><a class="button" href="https://actionnetwork.org/fundraising/bloomington-dsa-local-dues?amount=50&recurring=true&period=recurring_monthly">$50/Month</a></li>
+	<li><a class="button" href="https://actionnetwork.org/fundraising/bloomington-dsa-local-dues?recurring=true&period=recurring_monthly">$ Other</a></li>
+</ul>
+
+<p>Local dues fund the mission of the chapter day-to-day: helping us afford meeting space, rent equipment, purchase materials, and, eventually, afford a brick-and-mortar office.</p>
+
+<p>When you pay monthly National DSA Dues, 20% goes towards Bloomington DSA, and 80% goes towards the national project. By paying local dues, we can make sure we have a solid income stream to build socialism here in southern Indiana.</p>
+
+</section>
+
+</Layout>

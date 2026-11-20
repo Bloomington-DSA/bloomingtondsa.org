@@ -1,0 +1,25 @@
+---
+import '/src/styles/styles.css';
+import SEO from '/src/components/seo.astro';
+
+import Bud from '/src/media/bud.svg';
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+<!-- 
+    GET YOUR OWN ARTISAN HTML @ 
+      ✨ CHEAP.URLS.LOAN ✨
+"MORE CONVENIENT THAN A NEW HOBBY" 
+-->
+	<head>
+		<SEO title={title ? "Bloomington DSA: " + title : "Bloomington DSA"} description={description ? description : "Bloomington&nbsp;DSA is chapter of the Democratic Socialists of America&mdash;the largest socialist organization in the United States&mdash;based in Bloomington, Indiana."} />
+	</head>
+	<body style="max-width: unset;margin:2em;">
+    <main>
+    <h1>404 Not Found!</h1>
+		<Bud width="400" />
+<p><a href="/">Strut on back to the homepage, partner.</a></p>
+</main>
+</body>
+</html>
